@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100% /* white */;
+    --foreground: 240 10% 4% /* zinc-950 */;
+    --card: 0 0% 100% /* white */;
+    --card-foreground: 240 10% 4% /* zinc-950 */;
+    --popover: 0 0% 100% /* white */;
+    --popover-foreground: 240 10% 4% /* zinc-950 */;
+    --primary: 201 99% 40% /* sky-600 */;
+    --primary-foreground: 205 100% 98% /* sky-50 */;
+    --secondary: 215 95% 93% /* blue-100 */;
+    --secondary-foreground: 225 65% 33% /* blue-900 */;
+    --muted: 240 5% 96% /* zinc-100 */;
+    --muted-foreground: 240 4% 47% /* zinc-500 */;
+    --accent: 186 96% 91% /* cyan-100 */;
+    --accent-foreground: 197 64% 24% /* cyan-900 */;
+    --destructive: 0 85% 61% /* red-500 */;
+    --destructive-foreground: 0 0% 99% /* zinc-50 */;
+    --border: 240 6% 90% /* zinc-200 */;
+    --input: 240 6% 90% /* zinc-200 */;
+    --ring: 201 99% 40% /* sky-600 */;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 0% 12% /* zinc-950 */;
+    --foreground: 0 0% 99% /* zinc-50 */;
+    --card: 240 0% 15% /* zinc-950 */;
+    --card-foreground: 0 0% 99% /* zinc-50 */;
+    --popover: 240 10% 10% /* zinc-950 */;
+    --popover-foreground: 0 0% 99% /* zinc-50 */;
+    --primary: 201 99% 40% /* sky-600 */;
+    --primary-foreground: 205 100% 98% /* sky-50 */;
+    --secondary: 226 71% 41% /* blue-800 */;
+    --secondary-foreground: 214 100% 97% /* blue-50 */;
+    --muted: 240 4% 16% /* zinc-800 */;
+    --muted-foreground: 240 6% 65% /* zinc-400 */;
+    --accent: 195 70% 28% /* cyan-800 */;
+    --accent-foreground: 184 100% 97% /* cyan-50 */;
+    --destructive: 0 63% 31% /* red-900 */;
+    --destructive-foreground: 0 0% 99% /* zinc-50 */;
+    --border: 240 4% 16% /* zinc-800 */;
+    --input: 240 4% 16% /* zinc-800 */;
+    --ring: 201 99% 40% /* sky-600 */;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
