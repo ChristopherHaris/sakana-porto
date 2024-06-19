@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useRouter } from "next/navigation";
 
 const posts = [
   {
@@ -10,11 +11,13 @@ const posts = [
     title: "Search Kana",
     desc: "A search engine with semantic search",
     thumbnail: "/assets/searchkana.png",
-    href: "/",
+    href: "/project/search-kana",
   },
 ];
 
 export default function Project() {
+const router = useRouter();
+
   return (
     <>
       <motion.div
@@ -28,7 +31,7 @@ export default function Project() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {posts.map((post) => (
-          <div key={post.id} className="w-[340px] md:w-[240px]">
+          <div onClick={() => router.push(post.href)} key={post.id} className="w-[340px] md:w-[240px]">
             <span>
               <div className="overflow-hidden rounded-md mb-4">
                 <AspectRatio ratio={4 / 3}>
