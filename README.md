@@ -1,24 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sakana Porto
+A Portofolio website made using NextJS and Shadcn/ui, inspired by [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog/craftzdog-homepage)
 
-## Getting Started
+## Stack
+- [NextJS](https://nextjs.org/) - A flexible React framework that gives you building blocks to create fast, full-stack web applications
+- [Shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components that you can copy and paste into your apps
+- [Spline](https://spline.design/) - Easy to use and collaborate 3D object editor
 
-First, run the development server:
+## How to Install & Run
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Follow these steps to install and run the application:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone Repository:**
+   ```bash
+   git clone https://github.com/ChristopherHaris/sakana-porto.git
+   cd sakana-porto
+   ```
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the Application:**
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The application will be accessible at [localhost](http://localhost:3000/).
 
 ## Learn More
 
